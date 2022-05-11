@@ -3,14 +3,14 @@ import openvsp as vsp
 import matplotlib.pyplot as plt
 
 # Open VSP geometry
-vsp_file = 'wing.vsp3'
+vsp_file = 'cylinder.vsp3'
 vsp.ReadVSPFile(vsp_file)
 all_geoms = vsp.FindGeoms()
 geom_id = all_geoms[0]
 
 # Create a grid of test points in rst for wing
-nr = 25
-ns = 5
+nr = 12
+ns = 12
 nt = 3
 r_array = np.linspace(0.0, 1.0, nr)
 s_array = np.linspace(0.0, 0.5, ns)
